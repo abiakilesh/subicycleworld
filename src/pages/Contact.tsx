@@ -35,7 +35,7 @@ const Contact = () => (
                 </div>
               </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5!2d76.98!3d11.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAwJzM2LjAiTiA3NsKwNTgnNDguMCJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="250" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl" title="Ramanathapuram Location"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4524!2d76.9814!3d11.0125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2ce1b5c5e4d0f5a0!2sTrichy%20Road%2C%20Ramanathapuram%2C%20Coimbatore%2C%20Tamil%20Nadu%20641005!5e0!3m2!1sen!2sin!4v1702468800000" width="100%" height="250" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl" title="Ramanathapuram Location"></iframe>
           </div>
           
           {/* Showroom 2 */}
@@ -57,7 +57,7 @@ const Contact = () => (
                 </div>
               </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2!2d76.96!3d11.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAxJzEyLjAiTiA3NsKwNTcnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567891" width="100%" height="250" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl" title="Saibaba Colony Location"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.2154!2d76.9652!3d11.0245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859c9f0a1b2c3%3A0x4d5e6f7a8b9c0d1e!2sMettupalayam%20Road%2C%20Saibaba%20Colony%2C%20Coimbatore%2C%20Tamil%20Nadu%20641043!5e0!3m2!1sen!2sin!4v1702468800001" width="100%" height="250" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="rounded-xl" title="Saibaba Colony Location"></iframe>
           </div>
         </div>
         

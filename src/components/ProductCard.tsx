@@ -2,23 +2,23 @@ import { useState } from "react";
 import { Eye, IndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Product } from "@/data/products";
 
 interface ProductCardProps {
-  name: string;
-  image: string;
-  price: number;
-  features: string[];
-  category?: string;
+  product: Product;
   index?: number;
+  onViewDetails?: (product: Product) => void;
 }
 
-const ProductCard = ({ name, image, price, features, category, index = 0 }: ProductCardProps) => {
+const ProductCard = ({ product, index = 0, onViewDetails }: ProductCardProps) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const { name, image, price, features, category } = product;
 
   return (
     <div
-      className="group relative bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 opacity-0 animate-fade-in-up"
+      className="group relative bg-card rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 opacity-0 animate-fade-in-up cursor-pointer"
       style={{ animationDelay: `${index * 100}ms`, animationFillMode: "forwards" }}
+      onClick={() => onViewDetails?.(product)}
     >
       {/* Image Container */}
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
@@ -41,6 +41,10 @@ const ProductCard = ({ name, image, price, features, category, index = 0 }: Prod
         <Button
           size="sm"
           className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-primary text-primary-foreground hover:bg-primary/90"
+          onClick={(e) => {
+            e.stopPropagation();
+            onViewDetails?.(product);
+          }}
         >
           <Eye className="h-4 w-4 mr-2" />
           View Details

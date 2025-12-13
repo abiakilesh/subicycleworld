@@ -1,13 +1,7 @@
+import { useState } from "react";
 import ProductCard from "./ProductCard";
-
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  features: string[];
-  category?: string;
-}
+import ProductDetailModal from "./ProductDetailModal";
+import { Product } from "@/data/products";
 
 interface ProductGridProps {
   products: Product[];
@@ -15,6 +9,19 @@ interface ProductGridProps {
 }
 
 const ProductGrid = ({ products, title }: ProductGridProps) => {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewDetails = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   return (
     <section className="py-16 md:py-20 bg-background">
       <div className="container-custom">
@@ -28,16 +35,19 @@ const ProductGrid = ({ products, title }: ProductGridProps) => {
           {products.map((product, index) => (
             <ProductCard
               key={product.id}
-              name={product.name}
-              image={product.image}
-              price={product.price}
-              features={product.features}
-              category={product.category}
+              product={product}
               index={index}
+              onViewDetails={handleViewDetails}
             />
           ))}
         </div>
       </div>
+
+      <ProductDetailModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 };

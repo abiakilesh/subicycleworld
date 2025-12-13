@@ -16,6 +16,7 @@ import CultStoreBrand from "./pages/brands/CultStoreBrand";
 import FirefoxLifeBrand from "./pages/brands/FirefoxLifeBrand";
 import MultiBrand from "./pages/brands/MultiBrand";
 import NotFound from "./pages/NotFound";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/brands/multi-brand" element={<MultiBrand />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
