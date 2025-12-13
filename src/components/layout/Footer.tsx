@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from "lucide-react";
 import subiLogo from "@/assets/subi-logo.jpg";
 
 const Footer = () => {
@@ -21,22 +21,28 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=100076768810074"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/subi_cycle_world/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://x.com/SWorld75569"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
-                <Youtube className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
               </a>
             </div>
           </div>
