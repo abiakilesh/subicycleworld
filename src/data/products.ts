@@ -106,8 +106,8 @@ export const torontoBicyclesProducts: Product[] = [
   { id: "tor-12", name: "Toronto Fat Explorer", image: "https://images.unsplash.com/photo-1593764592116-bfb2a97c642a?w=600&h=450&fit=crop", price: 48999, features: ["21 Speed", "Fat Tires", "26 Inch"], category: "Fat Bike" },
 ];
 
-// Cult Store Products
-export const cultStoreProducts: Product[] = [
+// Cult Cycle Products
+export const cultCycleProducts: Product[] = [
   { id: "cult-1", name: "Cult Gateway", image: "https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=600&h=450&fit=crop", price: 8499, features: ["Single Speed", "Steel Frame", "26 Inch"], category: "BMX" },
   { id: "cult-2", name: "Cult Devotion", image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&h=450&fit=crop", price: 12999, features: ["Single Speed", "Chromoly", "20 Inch"], category: "BMX" },
   { id: "cult-3", name: "Cult Control", image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=600&h=450&fit=crop", price: 18999, features: ["Single Speed", "Full Chromoly", "20 Inch"], category: "BMX" },
@@ -122,8 +122,8 @@ export const cultStoreProducts: Product[] = [
   { id: "cult-12", name: "Cult Flatland", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop", price: 26999, features: ["Single Speed", "Chromoly", "20 Inch"], category: "Flatland" },
 ];
 
-// Firefox Life Products
-export const firefoxLifeProducts: Product[] = [
+// Firefox Products
+export const firefoxProducts: Product[] = [
   { id: "ff-1", name: "Firefox Maximus", image: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600", price: 26999, features: ["21 Speed", "Alloy Frame", "27.5 Inch"], category: "MTB" },
   { id: "ff-2", name: "Firefox Cyclone", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600", price: 32999, features: ["24 Speed", "Alloy Frame", "29 Inch"], category: "MTB" },
   { id: "ff-3", name: "Firefox Vortex", image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600", price: 22999, features: ["18 Speed", "Alloy Frame", "26 Inch"], category: "MTB" },

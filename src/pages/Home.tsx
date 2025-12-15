@@ -11,8 +11,8 @@ const brands = [
   { name: "Outdoors 91", path: "/brands/outdoors-91", description: "Built for exploration" },
   { name: "Stryder Bikes", path: "/brands/stryder-bikes", description: "Speed & performance" },
   { name: "Toronto Bicycles", path: "/brands/toronto-bicycles", description: "Premium cycling" },
-  { name: "Cult Store", path: "/brands/cult-store", description: "BMX specialists" },
-  { name: "Firefox Life", path: "/brands/firefox-life", description: "Ride the difference" },
+  { name: "Cult Cycle", path: "/brands/cult-cycle", description: "BMX specialists" },
+  { name: "Firefox", path: "/brands/firefox", description: "Ride the difference" },
 ];
 
 const Home = () => {
