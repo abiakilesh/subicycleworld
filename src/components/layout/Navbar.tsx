@@ -17,8 +17,8 @@ const brands = [
   { name: "Outdoors 91", path: "/brands/outdoors-91" },
   { name: "Stryder Bikes", path: "/brands/stryder-bikes" },
   { name: "Toronto Bicycles", path: "/brands/toronto-bicycles" },
-  { name: "Cult Store", path: "/brands/cult-store" },
-  { name: "Firefox Life", path: "/brands/firefox-life" },
+  { name: "Cult Cycle", path: "/brands/cult-cycle" },
+  { name: "Firefox", path: "/brands/firefox" },
   { name: "More Brands", path: "/brands/multi-brand" },
 ];
 
@@ -94,6 +94,17 @@ const Navbar = () => {
               </Button>
             </Link>
 
+            <Link to="/service">
+              <Button
+                variant="ghost"
+                className={`text-secondary-foreground hover:text-primary hover:bg-primary/10 ${
+                  isActive("/service") ? "text-primary bg-primary/10" : ""
+                }`}
+              >
+                Service
+              </Button>
+            </Link>
+
             <Link to="/contact">
               <Button
                 variant="ghost"
@@ -161,6 +172,16 @@ const Navbar = () => {
                 }`}
               >
                 About
+              </Link>
+
+              <Link
+                to="/service"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`px-4 py-2 rounded-lg text-secondary-foreground hover:bg-primary/10 hover:text-primary transition-colors ${
+                  isActive("/service") ? "bg-primary/10 text-primary" : ""
+                }`}
+              >
+                Service
               </Link>
 
               <Link
