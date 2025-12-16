@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, IndianRupee, Phone, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { IndianRupee, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,25 +19,9 @@ interface ProductDetailModalProps {
 }
 
 const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProps) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [inquiryForm, setInquiryForm] = useState({ name: "", phone: "", message: "" });
 
   if (!product) return null;
-
-  // Generate multiple image views (simulating different angles)
-  const productImages = [
-    product.image,
-    product.image.replace("w=600", "w=600&q=80"),
-    product.image.replace("w=600", "w=600&q=90"),
-  ];
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % productImages.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
-  };
 
   const handleWhatsAppInquiry = () => {
     const message = encodeURIComponent(
@@ -81,56 +65,14 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
 
         <div className="p-6">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Image Gallery */}
+            {/* Single Product Image */}
             <div className="space-y-4">
               <div className="relative aspect-square rounded-xl overflow-hidden bg-muted">
                 <img
-                  src={productImages[currentImageIndex]}
+                  src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary/80 text-secondary-foreground hover:bg-secondary transition-colors"
-                >
-                  <ChevronLeft className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-secondary/80 text-secondary-foreground hover:bg-secondary transition-colors"
-                >
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-
-                {/* Image Indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {productImages.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentImageIndex(idx)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        idx === currentImageIndex ? "bg-primary" : "bg-muted-foreground/50"
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Thumbnail Strip */}
-              <div className="flex gap-2">
-                {productImages.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentImageIndex(idx)}
-                    className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                      idx === currentImageIndex ? "border-primary" : "border-transparent"
-                    }`}
-                  >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
-                  </button>
-                ))}
               </div>
             </div>
 
