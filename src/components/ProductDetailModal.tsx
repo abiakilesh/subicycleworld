@@ -39,14 +39,11 @@ const ProductDetailModal = ({ product, isOpen, onClose }: ProductDetailModalProp
     setInquiryForm({ name: "", phone: "", message: "" });
   };
 
-  // Extended specifications based on features
-  const specifications = [
+  // Use product-specific specifications or fallback to features
+  const specifications = product.specifications || [
     { label: "Gears", value: product.features[0] || "N/A" },
     { label: "Frame", value: product.features[1] || "N/A" },
     { label: "Wheel Size", value: product.features[2] || "N/A" },
-    { label: "Brakes", value: "Disc Brakes" },
-    { label: "Suspension", value: product.category === "MTB" ? "Front Suspension" : "Rigid" },
-    { label: "Weight", value: "12-15 kg (approx)" },
   ];
 
   return (
